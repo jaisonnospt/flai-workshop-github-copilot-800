@@ -42,8 +42,8 @@ function Activities() {
       <h2>Activities</h2>
       <p className="text-muted">Total activities: {activities.length}</p>
       <div className="table-responsive">
-        <table className="table table-striped table-hover">
-          <thead className="table-dark">
+        <table className="table table-hover table-dark">
+          <thead>
             <tr>
               <th>Activity Type</th>
               <th>Duration (min)</th>

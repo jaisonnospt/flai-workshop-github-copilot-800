@@ -124,58 +124,81 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
   border: 1px solid rgba(102, 126, 234, 0.3);
 }
 
-.table {
+.table,
+.table-dark,
+.table.table-dark {
   margin-bottom: 0;
-  color: #e0e0e0;
+  color: #e0e0e0 !important;
+  background-color: transparent !important;
 }
 
-.table thead {
-  background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
-  color: white;
+.table thead,
+.table-dark thead,
+.table.table-dark thead {
+  background: linear-gradient(135deg, #0f3460 0%, #533483 100%) !important;
+  color: white !important;
 }
 
-.table thead th {
-  border: none;
+.table thead th,
+.table-dark thead th,
+.table.table-dark thead th {
+  border: none !important;
   padding: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
+  color: white !important;
+  background-color: transparent !important;
 }
 
-.table tbody tr {
+.table tbody tr,
+.table-dark tbody tr,
+.table.table-dark tbody tr {
   transition: all 0.3s ease;
-  background: rgba(26, 26, 46, 0.5);
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  background: rgba(26, 26, 46, 0.5) !important;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1) !important;
 }
 
-.table tbody tr:hover {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(0, 212, 255, 0.2) 100%);
+.table tbody tr:hover,
+.table-dark tbody tr:hover,
+.table.table-dark tbody tr:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(0, 212, 255, 0.2) 100%) !important;
   transform: scale(1.01);
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 }
 
-.table td {
+.table td,
+.table-dark td,
+.table.table-dark td,
+.table tbody td {
   padding: 1rem;
   vertical-align: middle;
-  color: #e0e0e0;
-  border-color: rgba(102, 126, 234, 0.1);
+  color: #e0e0e0 !important;
+  border-color: rgba(102, 126, 234, 0.1) !important;
+  background-color: transparent !important;
+}
+
+/* Ensure striped styling is overridden */
+.table-striped tbody tr:nth-of-type(odd),
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(26, 26, 46, 0.5) !important;
 }
 
 /* Cards */
 .card {
-  border: 1px solid rgba(102, 126, 234, 0.3);
+  border: 1px solid rgba(102, 126, 234, 0.3) !important;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   overflow: hidden;
-  background: rgba(26, 26, 46, 0.8);
+  background: rgba(26, 26, 46, 0.8) !important;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(102, 126, 234, 0.5);
-  border-color: rgba(102, 126, 234, 0.6);
+  border-color: rgba(102, 126, 234, 0.6) !important;
 }
 
 .card-title {
@@ -189,7 +212,14 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 
 .card-body {
   padding: 1.5rem;
-  color: #e0e0e0;
+  color: #e0e0e0 !important;
+}
+
+.card-body p,
+.card-body .card-text,
+.card-body ul,
+.card-body li {
+  color: #e0e0e0 !important;
 }
 
 /* Badges */
@@ -252,8 +282,8 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 
 /* Jumbotron / Hero Section */
 .jumbotron {
-  background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
-  color: white;
+  background: linear-gradient(135deg, #0f3460 0%, #533483 100%) !important;
+  color: white !important;
   border-radius: 15px;
   padding: 3rem 2rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -261,13 +291,16 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 }
 
 .jumbotron .display-4 {
-  color: white;
+  color: white !important;
   font-weight: bold;
   text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+  background: none !important;
+  -webkit-text-fill-color: white !important;
 }
 
-.jumbotron p {
-  color: rgba(255, 255, 255, 0.95);
+.jumbotron p,
+.jumbotron .lead {
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .jumbotron hr {

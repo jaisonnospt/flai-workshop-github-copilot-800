@@ -61,7 +61,7 @@ function Workouts() {
                   <span className={`badge bg-${getDifficultyBadge(workout.difficulty)} me-2`}>
                     {workout.difficulty}
                   </span>
-                  <span className="badge bg-info text-dark">{workout.category}</span>
+                  <span className="badge bg-info">{workout.category}</span>
                 </div>
                 <ul className="list-unstyled">
                   <li><strong>Duration:</strong> {workout.duration} minutes</li>

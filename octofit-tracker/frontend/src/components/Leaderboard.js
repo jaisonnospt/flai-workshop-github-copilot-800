@@ -42,8 +42,8 @@ function Leaderboard() {
       <h2>Leaderboard</h2>
       <p className="text-muted">Top heroes by calories burned</p>
       <div className="table-responsive">
-        <table className="table table-striped table-hover">
-          <thead className="table-dark">
+        <table className="table table-hover table-dark">
+          <thead>
             <tr>
               <th>Rank</th>
               <th>Hero Name</th>
@@ -56,7 +56,7 @@ function Leaderboard() {
             {leaderboard.map((entry) => (
               <tr key={entry._id}>
                 <td>
-                  <span className={`badge ${entry.rank <= 3 ? 'bg-warning text-dark' : 'bg-secondary'}`}>
+                  <span className={`badge ${entry.rank <= 3 ? 'bg-warning' : 'bg-secondary'}`}>
                     #{entry.rank}
                   </span>
                 </td>

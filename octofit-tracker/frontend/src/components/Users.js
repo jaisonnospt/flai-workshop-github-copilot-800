@@ -42,8 +42,8 @@ function Users() {
       <h2>Users (Superheroes)</h2>
       <p className="text-muted">Total heroes: {users.length}</p>
       <div className="table-responsive">
-        <table className="table table-striped table-hover">
-          <thead className="table-dark">
+        <table className="table table-hover table-dark">
+          <thead>
             <tr>
               <th>Name</th>
               <th>Username</th>

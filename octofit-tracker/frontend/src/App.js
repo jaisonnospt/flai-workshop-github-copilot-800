@@ -11,7 +11,7 @@ import Workouts from './components/Workouts';
 function Home() {
   return (
     <div className="container mt-4">
-      <div className="jumbotron bg-light p-5 rounded">
+      <div className="jumbotron p-5 rounded">
         <h1 className="display-4">Welcome to OctoFit Tracker! 🦸‍♂️</h1>
         <p className="lead">
           Track your fitness activities with your favorite superheroes from Team Marvel and Team DC!

@@ -4,6 +4,7 @@ from djongo import models
 class User(models.Model):
     _id = models.ObjectIdField(primary_key=True)
     name = models.CharField(max_length=200)
+    username = models.CharField(max_length=100, unique=True, default='user')
     email = models.EmailField(unique=True)
     team_id = models.CharField(max_length=200, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -5,7 +5,7 @@ from .models import User, Team, Activity, Leaderboard, Workout
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['_id', 'name', 'email', 'team_id', 'created_at']
+        fields = ['_id', 'name', 'username', 'email', 'team_id', 'created_at']
         read_only_fields = ['_id', 'created_at']
 
 

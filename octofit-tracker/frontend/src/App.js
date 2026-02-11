@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import logo from './octofitapp-logo.png';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
@@ -33,8 +34,9 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              🦸 OctoFit Tracker
+            <Link className="navbar-brand d-flex align-items-center" to="/">
+              <img src={logo} alt="OctoFit Logo" className="navbar-logo me-2" />
+              <span>OctoFit Tracker</span>
             </Link>
             <button
               className="navbar-toggler"

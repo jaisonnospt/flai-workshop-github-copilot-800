@@ -1,10 +1,11 @@
-/* OctoFit Tracker - App Styling */
+/* OctoFit Tracker - Dark Mode Styling */
 
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 25%, #24243e 50%, #1a1a2e 75%, #16213e 100%);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
+  color: #e0e0e0;
 }
 
 @keyframes gradientShift {
@@ -15,8 +16,9 @@
 
 /* Navbar Styling */
 .navbar {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%) !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgba(102, 126, 234, 0.3);
 }
 
 .navbar-brand {
@@ -57,27 +59,29 @@
 
 /* Container Styling */
 .container {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(26, 26, 46, 0.85);
   border-radius: 15px;
   padding: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #00d4ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1.5rem;
   font-weight: bold;
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
 }
 
 .display-4 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #00d4ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -92,7 +96,7 @@ a {
 }
 
 a:hover {
-  color: #764ba2;
+  color: #00d4ff;
   text-decoration: none;
 }
 
@@ -103,7 +107,7 @@ a:not(.nav-link):not(.navbar-brand)::after {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #00d4ff 100%);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -117,14 +121,16 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
   margin-top: 1.5rem;
   border-radius: 8px;
   overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.3);
 }
 
 .table {
   margin-bottom: 0;
+  color: #e0e0e0;
 }
 
 .table thead {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
   color: white;
 }
 
@@ -139,35 +145,41 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 
 .table tbody tr {
   transition: all 0.3s ease;
+  background: rgba(26, 26, 46, 0.5);
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
 }
 
 .table tbody tr:hover {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(0, 212, 255, 0.2) 100%);
   transform: scale(1.01);
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 }
 
 .table td {
   padding: 1rem;
   vertical-align: middle;
+  color: #e0e0e0;
+  border-color: rgba(102, 126, 234, 0.1);
 }
 
 /* Cards */
 .card {
-  border: none;
+  border: 1px solid rgba(102, 126, 234, 0.3);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   overflow: hidden;
+  background: rgba(26, 26, 46, 0.8);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 12px rgba(102, 126, 234, 0.5);
+  border-color: rgba(102, 126, 234, 0.6);
 }
 
 .card-title {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #00d4ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -177,6 +189,7 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 
 .card-body {
   padding: 1.5rem;
+  color: #e0e0e0;
 }
 
 /* Badges */
@@ -188,24 +201,27 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 }
 
 .badge.bg-warning {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%) !important;
   color: white;
 }
 
 .badge.bg-secondary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: linear-gradient(135deg, #667eea 0%, #0f3460 100%) !important;
+  color: white;
 }
 
 .badge.bg-success {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  background: linear-gradient(135deg, #00d4ff 0%, #090979 100%) !important;
+  color: white;
 }
 
 .badge.bg-danger {
   background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+  color: white;
 }
 
 .badge.bg-info {
-  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%) !important;
+  background: linear-gradient(135deg, #30cfd0 0%, #533483 100%) !important;
   color: white;
 }
 
@@ -219,13 +235,14 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #0f3460 100%);
+  color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #0f3460 0%, #667eea 100%);
 }
 
 .btn-lg {
@@ -235,16 +252,18 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 
 /* Jumbotron / Hero Section */
 .jumbotron {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
   color: white;
   border-radius: 15px;
   padding: 3rem 2rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(102, 126, 234, 0.3);
 }
 
 .jumbotron .display-4 {
   color: white;
   font-weight: bold;
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
 }
 
 .jumbotron p {
@@ -259,15 +278,26 @@ a:not(.nav-link):not(.navbar-brand):hover::after {
 .loading-spinner {
   text-align: center;
   padding: 3rem;
+  color: #e0e0e0;
 }
 
 .text-danger {
   font-weight: 600;
+  color: #ff6b6b !important;
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #9ca3af !important;
   font-size: 0.95rem;
+}
+
+/* General text color */
+p, li, td, span {
+  color: #e0e0e0;
+}
+
+strong {
+  color: #ffffff;
 }
 
 /* Animations */
